@@ -13,7 +13,7 @@ const NewBookForm = () => {
   };
 
   return (
-    <form class="book-form" onSubmit={handleSubmit}>
+    <form className="book-form" onSubmit={handleSubmit}>
       <input
         className="book-form__input"
         type="text"
