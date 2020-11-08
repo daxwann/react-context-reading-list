@@ -8,11 +8,14 @@ const NewBookForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     addBook(title, author);
+    setTitle('');
+    setAuthor('');
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form class="book-form" onSubmit={handleSubmit}>
       <input
+        className="book-form__input"
         type="text"
         placeholder="book title"
         value={title}
@@ -20,13 +23,14 @@ const NewBookForm = () => {
         required
       />
       <input
+        className="book-form__input"
         type="text"
         placeholder="author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         required
       />
-      <input type="submit" value="Add Book" />
+      <input className="book-form__submit" type="submit" value="Add Book" />
     </form>
   );
 };
